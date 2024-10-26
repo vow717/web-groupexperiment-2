@@ -1,0 +1,42 @@
+import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    component: () => import('@/views/index.vue')
+  },
+  {
+    path: '/li-wlr',
+    component: () => import('@/views/li-wlr/index.vue')
+  },
+  {
+    path: '/she-pcg',
+    component: () => import('@/views/she-pcg/index.vue')
+  },
+  {
+    path: '/yue-lqg',
+    component: () => import('@/views/yue-lqg/index.vue')
+  },
+  {
+    path: '/shu-wkf',
+    component: () => import('@/views/shu-wkf/index.vue')
+  },
+  {
+    path: '/shu2-pyh',
+    component: () => import('@/views/shu2-pyh/index.vue')
+  },
+  {
+    path: '/yi-lxy',
+    component: () => import('@/views/yi-lxy/index.vue')
+  }
+]
+
+const router = createRouter({
+  // HTML5 Mode。createWebHistory()函数，生产环境下需要web容器完成转发
+  // createWebHashHistory()函数仍使用#符号，无需配置
+  // history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
+  routes
+})
+
+export default router
