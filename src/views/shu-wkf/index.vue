@@ -14,6 +14,8 @@ import Main from './main/index.vue'
     <div style="position: relative; width: 80%; margin: 0 auto">
       <Header />
       <Main />
+      <br />
+      <br />
       <Footer style="position: fixed; bottom: 0; width: 80%" />
     </div>
   </div>
