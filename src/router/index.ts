@@ -36,6 +36,14 @@ const routes: RouteRecordRaw[] = [
       {
         path: 'sfjs',
         component: () => import('@/views/shu-wkf/main/SfjsView.vue')
+      },
+      {
+        path: 'pfpl',
+        component: () => import('@/views/shu-wkf/main/PfplView.vue')
+      },
+      {
+        path: 'other',
+        component: () => import('@/views/shu-wkf/main/OtherView.vue')
       }
     ]
   },

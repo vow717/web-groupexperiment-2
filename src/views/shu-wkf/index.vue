@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ArrowLeft } from '@element-plus/icons-vue'
+import Footer from './Footer.vue'
 import Header from './Header.vue'
 import Main from './main/index.vue'
 </script>
@@ -13,6 +14,7 @@ import Main from './main/index.vue'
     <div style="position: relative; width: 80%; margin: 0 auto">
       <Header />
       <Main />
+      <Footer style="position: fixed; bottom: 0; width: 80%" />
     </div>
   </div>
 </template>
@@ -22,8 +24,8 @@ import Main from './main/index.vue'
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
-  height: 100%;
+
+  min-height: 100vh;
   width: 100%;
 }
 </style>

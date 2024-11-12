@@ -7,7 +7,8 @@ const menus = [
   { name: '历史渊源', path: '/shu-wkf/lsyy' },
   { name: '书写工具与材料板块', path: '/shu-wkf/sxgj' },
   { name: '书法鉴赏', path: '/shu-wkf/sfjs' },
-  { name: '关于', path: '/shu-wkf/about' }
+  { name: '评分评论', path: '/shu-wkf/pfpl' },
+  { name: '其他', path: '/shu-wkf/other' }
 ]
 const route = useRoute()
 const activeIndexR = ref('')

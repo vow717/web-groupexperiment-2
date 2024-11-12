@@ -13,7 +13,7 @@
     <router-link to="/yi-lxy">艺</router-link>
   </div>
   <div>
-    <router-link to="/shu-wkf">术</router-link>
+    <router-link to="/shu-wkf">书</router-link>
   </div>
   <div>
     <router-link to="/shu2-pyh">数</router-link>
