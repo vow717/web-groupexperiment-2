@@ -32,7 +32,7 @@
 
 <script setup>
 import './css/bootstrap.min.css'
-import './css/swiper-bundle.min.css'
+
 import { register } from 'swiper/element/bundle';
 register();
 
