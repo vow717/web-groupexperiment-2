@@ -18,7 +18,7 @@ import Main from './main/index.vue'
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .background {
   background-image: url('@/assets/wkfImgs/background2.png');
   background-size: cover;

@@ -19,3 +19,4 @@
     <router-link to="/shu2-pyh">数</router-link>
   </div>
 </template>
+
