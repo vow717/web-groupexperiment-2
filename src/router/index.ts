@@ -19,7 +19,25 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/shu-wkf',
-    component: () => import('@/views/shu-wkf/index.vue')
+    component: () => import('@/views/shu-wkf/index.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/shu-wkf/main/Home.vue')
+      },
+      {
+        path: 'lsyy',
+        component: () => import('@/views/shu-wkf/main/LsyyView.vue')
+      },
+      {
+        path: 'sxgj',
+        component: () => import('@/views/shu-wkf/main/SxgjView.vue')
+      },
+      {
+        path: 'sfjs',
+        component: () => import('@/views/shu-wkf/main/SfjsView.vue')
+      }
+    ]
   },
   {
     path: '/shu2-pyh',
