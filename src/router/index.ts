@@ -16,6 +16,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/yue-lqg',
     component: () => import('@/views/yue-lqg/index.vue')
+    
   },
   {
     path: '/shu-wkf',
@@ -52,7 +53,6 @@ const routes: RouteRecordRaw[] = [
     
     children:[
       {path:'home',name:'home',component:()=>import('@/views/shu2-pyh/components/home.vue')},
-      {path:'book',name:'book' ,component:()=>import('@/views/shu2-pyh/components/book.vue')},
       {path:'person',name:'person', component:()=>import('@/views/shu2-pyh/components/person.vue')},
       {path:'story',name:'story', component:()=>import('@/views/shu2-pyh/components/story.vue')}
     ]

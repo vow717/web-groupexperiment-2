@@ -40,13 +40,12 @@
 
 <script setup>
 import { reactive } from 'vue';
-import { useRoute } from 'vue-router';
+
 
 const navs = reactive([
   {id:1,nav:'主页',add:'home'},
-  {id:2,nav:'人',add:'person'},
-  {id:3,nav:'事',add:'story'},
-  {id:4,nav:'书',add:'book'}
+  {id:2,nav:'人物',add:'person'},
+  {id:3,nav:'故事',add:'story'},
 ])
 
 
