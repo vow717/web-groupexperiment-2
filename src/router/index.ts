@@ -9,10 +9,12 @@ const routes: RouteRecordRaw[] = [
     path: '/li-wlr',
     component: () => import('@/views/li-wlr/index.vue')
   },
+  
   {
     path: '/she-pcg',
     component: () => import('@/views/she-pcg/index.vue')
   },
+
   {
     path: '/yue-lqg',
     component: () => import('@/views/yue-lqg/index.vue')
@@ -48,6 +50,7 @@ const routes: RouteRecordRaw[] = [
       }
     ]
   },
+
   {
     path: '/shu2-pyh',component: () => import('@/views/shu2-pyh/index.vue'),
     
@@ -57,6 +60,7 @@ const routes: RouteRecordRaw[] = [
       {path:'story',name:'story', component:()=>import('@/views/shu2-pyh/components/story.vue')}
     ]
   },
+
   {
     path: '/yi-lxy',
     component: () => import('@/views/yi-lxy/index.vue')
