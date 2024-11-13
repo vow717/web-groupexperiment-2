@@ -1,6 +1,6 @@
 <template>
 <div class="footer">
-    <div>庞宇豪</div>
+    <div>庞宇豪<i class="bi bi-disc-fill"></i></div>
 </div>
 
 </template>

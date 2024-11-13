@@ -2,7 +2,7 @@
   <div class="all">
     <headdder></headdder>
 
-    <RouterView> </RouterView>
+    <RouterView></RouterView>
     
     <br>
     <Footer></Footer>

@@ -17,7 +17,7 @@
             <button class="btn btn-light">{{ n.nav }}</button>
           </router-link>
         </li>
-
+<!-- 
         <li class="nav-item dropdown">
           <router-link class="nav-link dropdown-toggle" role="button"
          data-bs-toggle="dropdown" aria-expanded="false"
@@ -28,7 +28,7 @@
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
+        </li> -->
 
       </ul>
 

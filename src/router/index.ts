@@ -51,10 +51,10 @@ const routes: RouteRecordRaw[] = [
     path: '/shu2-pyh',component: () => import('@/views/shu2-pyh/index.vue'),
     
     children:[
-      {path:'home',component:()=>import('@/views/shu2-pyh/components/home.vue')},
-      {path:'book',component:()=>import('@/views/shu2-pyh/components/book.vue')},
-      {path:'person',component:()=>import('@/views/shu2-pyh/components/person.vue')},
-      {path:'story',component:()=>import('@/views/shu2-pyh/components/story.vue')}
+      {path:'home',name:'home',component:()=>import('@/views/shu2-pyh/components/home.vue')},
+      {path:'book',name:'book' ,component:()=>import('@/views/shu2-pyh/components/book.vue')},
+      {path:'person',name:'person', component:()=>import('@/views/shu2-pyh/components/person.vue')},
+      {path:'story',name:'story', component:()=>import('@/views/shu2-pyh/components/story.vue')}
     ]
   },
   {
