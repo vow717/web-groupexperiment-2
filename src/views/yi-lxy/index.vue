@@ -2,4 +2,5 @@
 <template>
   <router-link to="/">返回首页</router-link>
   <div>艺</div>
+  2131231312
 </template>
