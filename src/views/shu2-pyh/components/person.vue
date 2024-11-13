@@ -2,10 +2,10 @@
 <br>
 <div class="container">
     <div class="row g-0">
-        <div class="col-md-12 animate__animated animate__fadeInDown" v-for="p in people">
+        <div class="col-md-12 " v-for="p in people">
             <div class="card">
-            <img class="card-img-top element" src="https://ik.imagekit.io/hushimg/NoteImgs/%E7%A5%96%E5%86%B2%E4%B9%8B.jpeg?updatedAt=1731490223019"  alt="">
-            <div class="card-body">
+            <img class="card-img-top element animate__animated" src="https://ik.imagekit.io/hushimg/NoteImgs/%E7%A5%96%E5%86%B2%E4%B9%8B.jpeg?updatedAt=1731490223019"  alt="">
+            <div class="card-body animate__animated">
                 <div class="card-title">{{ p.name }} <i class="bi bi-chat-dots"></i></div>
                 <div class="card-text"> {{ p.detail}}</div>
             </div>
@@ -13,11 +13,12 @@
         </div>
     </div>
 </div>
+<br>
 
 </template>
 
 <script setup>
-import { reactive } from 'vue';
+import { onMounted, reactive } from 'vue';
 
 
 const people = reactive([
@@ -27,6 +28,38 @@ const people = reactive([
     {name:'刘徽',detail:'刘徽是三国时期魏国的数学家，他的数学成就不仅限于《海岛算经》，他还对许多数学问题进行了深入研究，尤其是在几何学和代数学方面。书中涉及了很多实用的计算问题，例如比例、分数计算、面积和体积计算等，具有较强的实际应用性质。刘徽最著名的贡献之一是他对《九章算术》的注解，他提出了很多创新性的数学方法，如“割圆术”（类似于现代的积分法），用于解决圆周和圆面积等几何问题。此外，刘徽也提出了“密度法”和“孪生法”，为后世的数学发展奠定了基础。'},
     {name:'朱世杰',detail:'朱世杰是南宋时期著名的数学家，他的《算学启蒙》主要是面向初学者的数学教材，意在普及数学知识和解题技巧。朱世杰提出了一些新的数学思想，如“均值法”和“推演法”，对于古代中国数学教育的发展起到了积极作用。更重要的是，他在方程解法的系统性和算法的简化方面有显著贡献，体现了中国古代数学思维的独特性。'}
 ])
+
+onMounted(()=>{
+    const targets = document.querySelectorAll('.animate__animated.element');
+    const cards = document.querySelectorAll('.animate__animated.card-body');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate__rotateIn'); // 添加从左边弹出的动画类
+            entry.target.classList.add('visible'); // 添加可见类
+            observer.unobserve(entry.target); // 停止观察
+        }
+    });
+});
+const observerCard = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate__zoomInRight'); // 添加从左边弹出的动画类
+            entry.target.classList.add('visible'); // 添加可见类
+            observer.unobserve(entry.target); // 停止观察
+        }
+    });
+});
+
+targets.forEach(target => {
+    observer.observe(target); // 观察每个目标元素
+});
+cards.forEach(card=>{
+    observerCard.observe(card);
+})
+})
+
 </script>
 <style scoped>
 div.card{
@@ -56,5 +89,11 @@ div.card div.card-body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+.animate__animated{
+    opacity: 0;
+}
+.visible{
+    opacity: 1;
 }
 </style>
