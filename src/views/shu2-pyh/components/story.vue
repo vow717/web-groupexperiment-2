@@ -3,7 +3,9 @@
 <div class="container">
     <div class="row page" v-for="e in els">
 
-        <div class="col-md-2"><button class="btn btn-dark">{{ e.title }}</button></div>
+        <div class="col-md-2"> 
+                <button class="btn btn-dark">{{ e.title }}</button>
+        </div>
 
         <div class="col-md-10 storys">
 
@@ -18,13 +20,16 @@
 
       </div>
     </div>
+    <P5BackTop right="20"></P5BackTop>
 </div>
 <br>
 </template>
 
 <script setup>
 import { onUnmounted, reactive,ref } from 'vue';
-import {elements}  from '../js/data.js'
+import {elements}  from '../js/data.js';
+import {P5BackTop} from 'p5-ui'
+import 'p5-ui/dist/style.css'
 const els = reactive(elements);
 
 const show = (s)=>{
