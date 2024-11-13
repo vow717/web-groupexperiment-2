@@ -16,7 +16,7 @@
     <router-link to="/shu-wkf">书</router-link>
   </div>
   <div>
-    <router-link to="/shu2-pyh">数</router-link>
+    <router-link to="/shu2-pyh/home">数</router-link>
   </div>
 </template>
 
