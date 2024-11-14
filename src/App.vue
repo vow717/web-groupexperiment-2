@@ -10,3 +10,9 @@ import LoadingView from './components/LoadingView.vue'
     <template #fallback><loading-view /></template>
   </suspense>
 </template>
+<style>
+body{
+  margin:0;
+  padding:0;
+}
+</style>

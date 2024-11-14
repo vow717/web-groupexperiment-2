@@ -1,5 +1,12 @@
-<script setup lang="ts"></script>
 <template>
-  <router-link to="/">返回首页</router-link>
-  <div>乐</div>
+<div id="app">
+  <router-view></router-view>
+</div>
 </template>
+<script setup>
+
+</script>
+
+<style scoped>
+
+</style>
