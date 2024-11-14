@@ -17,7 +17,7 @@ const routes: RouteRecordRaw[] = [
 
   {
     path: '/yue-lqg',
-    component: () => import('@/views/yue-lqg/index.vue')
+    component: () => import('@/views/yue-lqg/index.vue'),
     
     component: () => import('@/views/yue-lqg/index.vue'),
     children: [
