@@ -32,7 +32,7 @@ div.all{
   position:relative;
   min-height:100vh ;
   min-width: 100vh;
-  background-color: #fff;
+  background-color: #eeeeee;
   font-size:16px;
 }
 </style>
