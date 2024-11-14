@@ -2,16 +2,16 @@
   <div class="container">
   <br>     
   <swiper-container  autoplay-delay="2000" speed="500" loop="true" space-between="25"
-        :slides-per-view="3" :pagination="{hideOnClick: true}"
+        :slides-per-view="3"
         @swiperprogress="onProgress" @swiperslidechange="onSlideChange">
 
         <swiper-slide v-for="s in swiperSlides">
       <div class="a">
-         <img :src="s.url" alt="">
+        <img :src="s.url" alt="">
         <div class="card text-overlay">
         <div class="card-body">
-          <br>
         <h5 class="card-title"><strong>{{ s.title }}</strong></h5>
+        <br>
         <h6 class="card-subtitle">作者:{{ s.author }}</h6>
         <p class="card-text">{{s.info}}</p>
         </div> 
@@ -72,7 +72,7 @@ swiper-slide img{
   color: white;
   text-align: center;
   width: 100%;
-  height: 0;
+  height: 40px;
   overflow: hidden;
   transition: height 0.3s ease;
 }

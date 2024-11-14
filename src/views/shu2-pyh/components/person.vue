@@ -11,8 +11,8 @@
             <div class="col-md-9">
                 <div class="card">
             <div class="card-body animate__animated">
-                <div class="card-title">{{ p.name }} <i class="bi bi-chat-dots"></i></div>
-                <div class="card-text"> {{ p.detail}}</div>
+                <div class="card-title"><P5Title :content="p.name" font_color="red" size="large"></P5Title><i class="bi bi-chat-dots"></i></div>
+                <div class="card-text"> <p5-text size="large">{{ p.detail}}</p5-text></div>
             </div>
         </div>
      </div>
@@ -25,6 +25,9 @@
 <script setup>
 import { onMounted, reactive } from 'vue';
 import {people} from '../js/data.js';
+import {P5Title,P5Text} from 'p5-ui';
+import 'animate.css'
+import 'p5-ui/dist/style.css'
 const peo = reactive(people);
 
 onMounted(()=>{
@@ -60,6 +63,8 @@ cards.forEach(card=>{
 
 </script>
 <style scoped>
+
+
 div.row{
     margin:0 0 20px 0 ;
 }
@@ -70,7 +75,10 @@ div.card{
     align-items: center;
     justify-content: space-evenly;
 }
+/* 图片旋转 */
 div.card.img{
+    border:none;
+    background-color: #eeeeee;
     background-image: url('../imgs/cp.png');
     background-position: 39%,50%;
     background-size:800px;
@@ -97,11 +105,12 @@ div.card img:hover {
     }
 }
 
-
+/* 进入视野再动画 */
 .animate__animated{
     opacity: 0;
 }
 .visible{
     opacity: 1;
 }
+
 </style>
