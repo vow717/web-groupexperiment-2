@@ -30,6 +30,7 @@ import { onUnmounted, reactive,ref } from 'vue';
 import {elements}  from '../js/data.js';
 import {P5BackTop} from 'p5-ui'
 import 'p5-ui/dist/style.css'
+import 'animate.css'
 const els = reactive(elements);
 
 const show = (s)=>{

@@ -25,6 +25,7 @@
 <script setup>
 import { onMounted, reactive } from 'vue';
 import {people} from '../js/data.js';
+import 'animate.css'
 const peo = reactive(people);
 
 onMounted(()=>{
