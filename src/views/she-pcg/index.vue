@@ -2,4 +2,8 @@
 <template>
   <router-link to="/">返回首页</router-link>
   <div>射</div>
+  1116
+
+
+  65
 </template>
