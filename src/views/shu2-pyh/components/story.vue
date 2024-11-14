@@ -12,11 +12,13 @@
                 
                 <div class="col-md-4"><P5Button @click="show(s)"><P5Title :content="s.name" size="large" font_color="red"></P5Title></P5Button></div>
                 <div :class="{'col-md-8':true,'animate__animated':true,'animate__lightSpeedInRight':s.flag,'active':s.flag}">
-                    <P5Text>{{ s.content }}</P5Text>
+                    <div class="card">
+                        <div class="card-body">
+                            <P5Text>{{ s.content }}</P5Text>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
       </div>
     </div>
     <P5BackTop right="20"></P5BackTop>
