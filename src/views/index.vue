@@ -10,7 +10,7 @@
     <router-link to="/she-pcg">射</router-link>
   </div>
   <div>
-    <router-link to="/yi-lxy">艺</router-link>
+    <router-link to="/yi-lxy">御</router-link>
   </div>
   <div>
     <router-link to="/shu-wkf">书</router-link>
