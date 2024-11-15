@@ -1,7 +1,6 @@
 <template>
-    <br>
-<div class="container">
-    <div class="row page" v-for="e in els">
+<div class="container-fluid">
+    <div class="row page g-0" v-for="e in els">
 
         <div class="col-md-2"> 
                 <button class="btn btn-dark">{{ e.title }}</button>
@@ -10,26 +9,28 @@
         <div class="col-md-10 storys">
 
             <div class="row" v-for="s in e.storys">
-
-                <div class="col-md-3"><button class="btn btn-light" @click="show(s)">{{ s.name }}</button></div>
-                <div :class="{'col-md-9':true,'animate__animated':true,'animate__backInRight':s.flag,'active':s.flag}">
-                    {{ s.content }}
+                
+                <div class="col-md-4"><P5Button @click="show(s)"><P5Title :content="s.name" size="large" font_color="red"></P5Title></P5Button></div>
+                <div :class="{'col-md-8':true,'animate__animated':true,'animate__lightSpeedInRight':s.flag,'active':s.flag}">
+                    <div class="card">
+                        <div class="card-body">
+                            <P5Text>{{ s.content }}</P5Text>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
       </div>
     </div>
     <P5BackTop right="20"></P5BackTop>
 </div>
-<br>
 </template>
-
 <script setup>
 import { onUnmounted, reactive,ref } from 'vue';
 import {elements}  from '../js/data.js';
-import {P5BackTop} from 'p5-ui'
+import {P5BackTop,P5Title,P5Text,P5Button} from 'p5-ui'
 import 'p5-ui/dist/style.css'
+import 'animate.css'
+
 const els = reactive(elements);
 
 const show = (s)=>{
@@ -48,6 +49,12 @@ onUnmounted(()=>{
 </script>
 
 <style scoped>
+*{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+
 div.row{
     display: flex;
     align-items: center;

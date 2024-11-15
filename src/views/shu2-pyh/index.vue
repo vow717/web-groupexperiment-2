@@ -16,8 +16,11 @@
 import { register } from 'swiper/element/bundle';
 register();
 import headdder from './components/header.vue'
-
 import Footer from './components/footer.vue'
+import 'jquery'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 </script>
 
 
@@ -29,7 +32,7 @@ div.all{
   position:relative;
   min-height:100vh ;
   min-width: 100vh;
-  background-color: #fff;
+  background-color: #eeeeee;
   font-size:16px;
 }
 </style>

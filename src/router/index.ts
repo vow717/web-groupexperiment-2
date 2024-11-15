@@ -7,9 +7,12 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/li-wlr',
-    component: () => import('@/views/li-wlr/index.vue')
+    component: () => import('@/views/li-wlr/index.vue'),redirect: '/li-wlr/hello',
+    children:[
+      {path:'hello',component:()=>import('@/views/li-wlr/hello.vue')}
+    ]
   },
-  
+
   {
     path: '/she-pcg',
     component: () => import('@/views/she-pcg/index.vue')
@@ -18,23 +21,23 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/yue-lqg',
     component: () => import('@/views/yue-lqg/index.vue'),
-    
-    component: () => import('@/views/yue-lqg/index.vue'),
+
     children: [
       {
-        path: '', component: () => import('@/views/yue-lqg/Home.vue'),
+        path: '',
+        component: () => import('@/views/yue-lqg/Home.vue'),
         children: [
           {
             path: '',
-            component: () => import ('@/views/yue-lqg/Subcomponents/Introduction.vue')
-         },
+            component: () => import('@/views/yue-lqg/Subcomponents/Introduction.vue')
+          },
           {
-             path: 'introduction',
-             component: () => import ('@/views/yue-lqg/Subcomponents/Introduction.vue')
+            path: 'introduction',
+            component: () => import('@/views/yue-lqg/Subcomponents/Introduction.vue')
           },
           {
             path: 'develop',
-            component:() => import ('@/views/yue-lqg/Subcomponents/Develop.vue')
+            component: () => import('@/views/yue-lqg/Subcomponents/Develop.vue')
           },
           {
             path: 'start',
@@ -43,7 +46,6 @@ const routes: RouteRecordRaw[] = [
               {
                 path: 'guqin',
                 component: () => import('@/views/yue-lqg/Subcomponents/music/guqin.vue')
-                 
               },
               {
                 path: 'pipa',
@@ -57,25 +59,23 @@ const routes: RouteRecordRaw[] = [
                 path: 'yueqin',
                 component: () => import('@/views/yue-lqg/Subcomponents/music/yueqin.vue')
               }
-              
-             ]
+            ]
           },
           {
             path: 'history',
-            component:() => import('@/views/yue-lqg/Subcomponents/History.vue')
+            component: () => import('@/views/yue-lqg/Subcomponents/History.vue')
           },
           {
-             path: '/history/:id', 
-             name: 'historyDetail',
-              component: () => import('@/views/yue-lqg/Subcomponents/HistoryDetail.vue')
+            path: '/history/:id',
+            name: 'historyDetail',
+            component: () => import('@/views/yue-lqg/Subcomponents/HistoryDetail.vue')
           },
           {
             path: 'art',
-              component:() => import('@/views/yue-lqg/Subcomponents/Art.vue')
+            component: () => import('@/views/yue-lqg/Subcomponents/Art.vue')
           }
-
         ]
-      }, 
+      }
     ]
   },
   {
@@ -110,12 +110,25 @@ const routes: RouteRecordRaw[] = [
   },
 
   {
-    path: '/shu2-pyh',component: () => import('@/views/shu2-pyh/index.vue'),
-    
-    children:[
-      {path:'home',name:'home',component:()=>import('@/views/shu2-pyh/components/home.vue')},
-      {path:'person',name:'person', component:()=>import('@/views/shu2-pyh/components/person.vue')},
-      {path:'story',name:'story', component:()=>import('@/views/shu2-pyh/components/story.vue')}
+    path: '/shu2-pyh',
+    component: () => import('@/views/shu2-pyh/index.vue'),
+
+    children: [
+      {
+        path: 'home',
+        name: 'home',
+        component: () => import('@/views/shu2-pyh/components/home.vue')
+      },
+      {
+        path: 'person',
+        name: 'person',
+        component: () => import('@/views/shu2-pyh/components/person.vue')
+      },
+      {
+        path: 'story',
+        name: 'story',
+        component: () => import('@/views/shu2-pyh/components/story.vue')
+      }
     ]
   },
 
