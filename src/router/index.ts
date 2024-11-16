@@ -15,7 +15,16 @@ const routes: RouteRecordRaw[] = [
 
   {
     path: '/she-pcg',
-    component: () => import('@/views/she-pcg/index.vue')
+    component: () => import('@/views/she-pcg/index.vue'),
+
+    children: [
+      {
+        path: 'people',
+        name: 'people',
+        component: () => import('@/views/she-pcg/components/people.vue')
+      }
+    ]
+
   },
 
   {
