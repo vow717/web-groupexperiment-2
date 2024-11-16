@@ -7,10 +7,11 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/li-wlr',
-    component: () => import('@/views/li-wlr/index.vue'),redirect: '/li-wlr/hello',
+    component: () => import('@/views/li-wlr/index.vue'),
     children:[
-      {path:'hello',component:()=>import('@/views/li-wlr/hello.vue')}
+      {path:'',component: ()=>import('@/views/li-wlr/components/首页.vue')}
     ]
+
   },
 
   {
