@@ -13,7 +13,7 @@
                         <!-- 标题 -->
                     <h3>比赛发射规定</h3>
                     <!-- 内容 -->
-                    <p style="position:relative;left:30px;padding-left:4px;width:16vw">比赛场内，除了在规定的练习时间或在发令长的信号指挥下，运动员在起射线上可以正对靶的方向外，其他时间不得向其他方向开弓;比赛时，除轮到发射的运动员外，其他人一律不得进入发射区等等。</p>
+                    <p style="position:relative;left:30px;padding-left:4px;width:16vw">比赛场内，除了在规定的练习时间或在发令长的信号指挥下，运动员在起射线上可以正对靶的方向外，其他时间不得向其他方向开弓。</p>
                  </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 <div class="story" id="s0">
                     <div class="info info2">
                         <h3 style="position:relative;left: -22px;">记分判环规定</h3>
-                            <p style="position:relative;left:-30px;">射箭比赛的环数也称分数，报环也称报靶或报分。确认淘汰赛和决赛的环值时，裁判员按降序报分，记分员和运动员代理核实记分表上的成绩。其具体的记分方法是：射中最外面的白色环区得1分;直到射中内黄心得10分。</p>
+                            <p style="position:relative;left:-30px;">确认淘汰赛和决赛的环值时。其具体的记分方法是：射中最外面的白色环区得1分;直到射中内黄心得10分。</p>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,10 @@
         </div>
         
       </div>
-      <Footer></Footer>
+
+
+      <footer><Footer></Footer></footer>
+      
 </template>
       
 <script setup>
@@ -72,7 +75,13 @@ onMounted(() => {
       
 <style lang="less" scoped>
     
-      
+    footer{
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: 100%;
+    }
+
       .out {
         width: 90vw;
         margin: 50px auto;
