@@ -14,12 +14,9 @@
         </div>
       </div>
     </div>
-
     <br>
-
-
     <div class="row" v-for="e in els" :key="e.id">
-      <div class="card">
+      <div class="card animate__animated">
         <img class="card-img-top" src="../imgs/1731508535800.gif">
         <div class="card-body">
           <h4 class="card-title"><i class="bi bi-columns-gap"></i>{{e.title}}</h4>
@@ -38,10 +35,29 @@
 </template>
 
 <script setup>
-import { provide, reactive } from 'vue';
+import {  onMounted, reactive } from 'vue';
 import swiper from './swiper.vue';
 import {elements} from '../js/data.js';
 const els = reactive(elements)
+
+
+onMounted(()=>{
+const targets = document.querySelectorAll('.animate__animated');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate__fadeIn'); 
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); 
+        }
+    });
+});
+targets.forEach( target => {
+  observer.observe(target);
+})
+
+})
+
 </script>
 
 <style scoped>
@@ -58,4 +74,11 @@ div.card img{
 div.card#top{
   text-align: center;
 }
+.visible{
+  opacity: 1;
+}
+.animate__animated{
+  opacity: 0;
+}
+
 </style>

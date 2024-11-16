@@ -2,16 +2,31 @@
 <div class="container-fluid">
     <div class="row page g-0" v-for="e in els">
 
-        <div class="col-md-2"> 
-                <button class="btn btn-dark">{{ e.title }}</button>
-        </div>
+        <div class="col-md-3"> 
+                <div class="card left">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <button class="btn btn-info btn-lg">{{ e.title }}</button>
+                        </div>
 
-        <div class="col-md-10 storys">
+                        <div class="card-text">
+                            <div v-for="s in e.storys">
+                            <div><Button class="btn btn-primary" @click="show(s)">{{ s.name }}</Button>
+                            </div>
+                         </div>
+
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+
+        <div class="col-md-9 storys">
 
             <div class="row" v-for="s in e.storys">
                 
-                <div class="col-md-4"><P5Button @click="show(s)"><P5Title :content="s.name" size="large" font_color="red"></P5Title></P5Button></div>
-                <div :class="{'col-md-8':true,'animate__animated':true,'animate__lightSpeedInRight':s.flag,'active':s.flag}">
+               
+                <div :class="{'col-md-12':true,'animate__animated':true,'animate__lightSpeedInRight':s.flag,'active':s.flag}">
                     <div class="card">
                         <div class="card-body">
                             <P5Text>{{ s.content }}</P5Text>
@@ -53,8 +68,15 @@ onUnmounted(()=>{
     overflow-x:hidden;
     overflow-y:hidden;
 }
-
-
+button.btn-primary{
+    margin:5px 0;
+    background-color: lightblue;
+    color: black;
+}
+.left{
+    background-image: url('../imgs/1731508535800.gif');
+    background-size:contain;
+}
 div.row{
     display: flex;
     align-items: center;
@@ -64,6 +86,7 @@ div.row{
     min-height: 300px;
     border-radius: 10px;
 }
+
 .animate__animated{
     opacity: 0;
 }
