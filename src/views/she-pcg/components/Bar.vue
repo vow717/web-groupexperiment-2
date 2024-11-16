@@ -7,7 +7,7 @@
         <div class="button-row">
           <button class="button" @click="navigateToPage1">首</button>
           <button class="button" @click="navigateToPage2">人</button>
-          <button class="button" @click="navigateToPage3">景</button>
+          <button class="button" @click="navigateToPage3">射</button>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ const navigateToPage2 = () => {
 };
 
 const navigateToPage3 = () => {
-  router.push('/she-pcg'); 
+  router.push('/she-pcg/shejian'); 
 };
 </script>
 

@@ -18,13 +18,18 @@ const routes: RouteRecordRaw[] = [
 
     children: [
       {
+        path:'',
+        component:()=>import('@/views/she-pcg/components/Home.vue')
+      },
+      {
         path: 'people',
         name: 'people',
         component: () => import('@/views/she-pcg/components/people.vue')
       },
       {
-        path:'',
-        component:()=>import('@/views/she-pcg/components/Home.vue')
+        path:'shejian',
+        name:'shejian',
+        component:() => import("@/views/she-pcg/components/shejian.vue")
       }
     ]
 
