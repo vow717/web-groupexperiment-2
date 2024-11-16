@@ -33,7 +33,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
    <img src="../assets/pyh/img4.jpg" alt="">
   </div>
   <div class="col-md-1 animate__animated animate__bounceInUp">
-    <router-link to="/yi-lxy"><h1>御</h1></router-link>
+    <router-link to="/yi-lxy/Login"><h1>御</h1></router-link>
   </div>
 
   <div class="col-md-1 img animate__animated animate__animated animate__bounceInDown">
@@ -75,7 +75,7 @@ img{
 
 .all{
   /* 背景 */
-  background-color: #eee;
+  background-color: #CA462F;
 
   display: flex;
   flex-direction: row;
@@ -95,16 +95,22 @@ img{
       margin-bottom: 60px;
     }
 .col-md-1 {
+  position: relative;
   margin-top: 60px; 
+  box-shadow:1px 1px 2px black;
+  z-index: 0;
 }
 
 
 a,img{
   transition: 0.3s;
+  z-index:0;
 }
 
 a:hover,img:hover{
+  z-index:9;
   transform: scale(1.1);
+  box-shadow:1px 1px 2px black;
 }
 
 a{
@@ -117,9 +123,10 @@ a{
   width: 100%;
   align-items: center;
   justify-content: center;
+  color:white;
 
   /* 链接样式 */
-  background-color: white;
+  background-color: #1E3B7A;
 }
   
 </style>

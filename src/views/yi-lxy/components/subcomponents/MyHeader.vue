@@ -18,10 +18,12 @@
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+
 const onLogout = () => {
   localStorage.removeItem('token')
-  router.push('/login')
+  router.push('/')
 }
+
 </script>
 
 <style lang="less" scoped>

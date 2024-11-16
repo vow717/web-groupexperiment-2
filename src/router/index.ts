@@ -8,7 +8,9 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/li-wlr',
     component: () => import('@/views/li-wlr/index.vue'),
-    
+    children:[
+      {path:'',component: ()=>import('@/views/li-wlr/components/首页.vue')}
+    ]
 
   },
 
@@ -18,18 +20,9 @@ const routes: RouteRecordRaw[] = [
 
     children: [
       {
-        path:'',
-        component:()=>import('@/views/she-pcg/components/Home.vue')
-      },
-      {
         path: 'people',
         name: 'people',
         component: () => import('@/views/she-pcg/components/people.vue')
-      },
-      {
-        path:'shejian',
-        name:'shejian',
-        component:() => import("@/views/she-pcg/components/shejian.vue")
       }
     ]
 
@@ -150,55 +143,54 @@ const routes: RouteRecordRaw[] = [
   },
 
   {
-    path: '/yi-lxy',
-    component: () => import('@/views/yi-lxy/Index.vue'),
-
-    children:[
-      { path: 'login', component: () => import ('@/views/yi-lxy/components/Login.vue') },
-      { 
-        path: 'home', 
-        component: () => import ('@/views/yi-lxy/components/Home.vue'),
-        children: [
-          { 
-            path: 'users', 
-            component: () => import ('@/views/yi-lxy/components/subcomponents/MyUsers.vue'),
-            children: [
-              {
-                path: ':id',
-                name:'details',
-                component: () => import ('@/views/yi-lxy/components/user/MyUserDetail.vue'), props: true
-              }
-            ]
-          },
-          { 
-            path: 'rights', 
-            component: () => import ('@/views/yi-lxy/components/subcomponents/MyRights.vue') 
-          },
-          { 
-            path: 'goods', 
-            component: () => import ('@/views/yi-lxy/components/subcomponents/MyGoods.vue') 
-          },
-          { 
-            path: 'orders', 
-            component: () => import ('@/views/yi-lxy/components/subcomponents/MyOrders.vue') 
-          },
-          { 
-            path: 'settings', 
-            component: () => import ('@/views/yi-lxy/components/subcomponents/MySettings.vue') 
-          },
-          { 
-            path: 'menu', 
-            component: () => import ('@/views/yi-lxy/components/subcomponents/MyMenu.vue') 
-          },
-          // { 
-          //   path: 'users/:id', 
-          //   component: () => import ('./components/user/MyUserDetail.vue'), props: true 
-          // }
-        ] 
-  }
- ]
+        path: '/yi-lxy',
+        component: () => import('@/views/yi-lxy/Index.vue'),
+        children:[
+          { path: 'login', component: () => import ('@/views/yi-lxy/components/Login.vue') },
+          { 
+            path: 'home', 
+            component: () => import ('@/views/yi-lxy/components/Home.vue'),
+            children: [
+              { 
+                path: 'users', 
+                component: () => import ('@/views/yi-lxy/components/subcomponents/MyUsers.vue'),
+                children: [
+                  {
+                    path: ':id',
+                    name:'details',
+                    component: () => import ('@/views/yi-lxy/components/user/MyUserDetail.vue'), props: true
+                  }
+                ]
+              },
+              { 
+                path: 'rights', 
+                component: () => import ('@/views/yi-lxy/components/subcomponents/MyRights.vue') 
+              },
+              { 
+                path: 'goods', 
+                component: () => import ('@/views/yi-lxy/components/subcomponents/MyGoods.vue') 
+              },
+              { 
+                path: 'orders', 
+                component: () => import ('@/views/yi-lxy/components/subcomponents/MyOrders.vue') 
+              },
+              { 
+                path: 'settings', 
+                component: () => import ('@/views/yi-lxy/components/subcomponents/MySettings.vue') 
+              },
+              { 
+                path: 'menu', 
+                component: () => import ('@/views/yi-lxy/components/subcomponents/MyMenu.vue') 
+              },
+              // { 
+              //   path: 'users/:id', 
+              //   component: () => import ('./components/user/MyUserDetail.vue'), props: true 
+              // }
+            ] 
+          }
+        ]
     
-    }
+      }
 ]
 
 const router = createRouter({
