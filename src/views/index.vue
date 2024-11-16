@@ -1,22 +1,126 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+</script>
 <template>
-  <div>
-    <router-link to="/li-wlr">礼</router-link>
+<div class="all">
+
+
+  <div class="container">
+    <div class="row g-0">
+  <div class="col-md-1 img animate__animated animate__animated animate__bounceInDown">
+   <img src="../assets/pyh/img1.jpg" alt="">
   </div>
-  <div>
-    <router-link to="/yue-lqg">乐</router-link>
+  <div class="col-md-1 animate__animated animate__bounceInUp">
+    <router-link to="/li-wlr" ><h1>礼</h1></router-link>
   </div>
-  <div>
-    <router-link to="/she-pcg">射</router-link>
+
+  <div class="col-md-1 img animate__animated animate__animated animate__bounceInDown">
+   <img src="../assets/pyh/img2.jpg" alt="">
   </div>
-  <div>
-    <router-link to="/yi-lxy">御</router-link>
+  <div class="col-md-1 animate__animated animate__bounceInUp">
+    <router-link to="/yue-lqg"><h1>乐</h1></router-link>
   </div>
-  <div>
-    <router-link to="/shu-wkf">书</router-link>
+
+  <div class="col-md-1 img animate__animated animate__animated animate__bounceInDown">
+   <img src="../assets/pyh/img3.jpg" alt="">
   </div>
-  <div>
-    <router-link to="/shu2-pyh/home">数</router-link>
+  <div class="col-md-1 animate__animated animate__bounceInUp">
+    <router-link to="/she-pcg"><h1>射</h1></router-link>
   </div>
+
+  <div class="col-md-1 img animate__animated animate__animated animate__bounceInDown">
+   <img src="../assets/pyh/img4.jpg" alt="">
+  </div>
+  <div class="col-md-1 animate__animated animate__bounceInUp">
+    <router-link to="/yi-lxy"><h1>御</h1></router-link>
+  </div>
+
+  <div class="col-md-1 img animate__animated animate__animated animate__bounceInDown">
+   <img src="../assets/pyh/img5.jpg" alt="">
+  </div>
+  <div class="col-md-1 animate__animated animate__bounceInUp">
+    <router-link to="/shu-wkf"><h1>书</h1></router-link>
+  </div>
+
+  <div class="col-md-1 img animate__animated animate__animated animate__bounceInDown">
+   <img src="../assets/pyh/img6.jpg" alt="">
+  </div>
+  <div class="col-md-1 animate__animated animate__bounceInUp">
+    <router-link to="/shu2-pyh/home"><h1>数</h1></router-link>
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
 </template>
+<style scoped>
+body{
+  position: relative;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.animate__animated {
+  will-change: transform, opacity;
+}
+
+.all{
+  /* 背景 */
+  background-color: #eee;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.row{
+  min-height: 500px;
+}
+
+
+.col-md-1.img {
+      margin-top: 0;
+      margin-bottom: 60px;
+    }
+.col-md-1 {
+  margin-top: 60px; 
+}
+
+
+a,img{
+  transition: 0.3s;
+}
+
+a:hover,img:hover{
+  transform: scale(1.1);
+}
+
+a{
+  text-decoration: none;
+}
+
+.col-md-1 a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  /* 链接样式 */
+  background-color: white;
+}
+  
+</style>
 

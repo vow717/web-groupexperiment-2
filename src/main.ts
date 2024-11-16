@@ -7,7 +7,7 @@ import router from './router'
 
 //pyh
 //运行前npm install
-
+import 'animate.css'
 
 
 
