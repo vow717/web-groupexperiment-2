@@ -8,9 +8,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/li-wlr',
     component: () => import('@/views/li-wlr/index.vue'),
-    children:[
-      {path:'',component: ()=>import('@/views/li-wlr/components/首页.vue')}
-    ]
+    
 
   },
 
@@ -23,6 +21,10 @@ const routes: RouteRecordRaw[] = [
         path: 'people',
         name: 'people',
         component: () => import('@/views/she-pcg/components/people.vue')
+      },
+      {
+        path:'',
+        component:()=>import('@/views/she-pcg/components/Home.vue')
       }
     ]
 

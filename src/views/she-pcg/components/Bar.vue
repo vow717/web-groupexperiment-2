@@ -50,7 +50,7 @@ const navigateToPage1 = () => {
 };
 
 const navigateToPage2 = () => {
-  router.push('/people'); 
+  router.push('/she-pcg/people'); 
 };
 
 const navigateToPage3 = () => {
